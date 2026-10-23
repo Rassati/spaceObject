@@ -1,6 +1,8 @@
 package br.com.joaocarloslima;
 
 public enum Direcao {
-    CIMA;
-
+    CIMA,
+    BAIXO,
+    ESQUERDA,
+    DIREITA,
 }
