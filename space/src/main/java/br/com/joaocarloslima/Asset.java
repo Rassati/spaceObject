@@ -59,16 +59,16 @@ public abstract class Asset {
     public void mover(){
         switch (direcao){
             case CIMA:
-                y--;
+                y= y-velocidade;
                 break;
             case BAIXO:
-                y++;
+                y = y + velocidade;
                 break;
             case DIREITA:
-                x++;
+                x = x + velocidade;
                 break;
             case ESQUERDA:
-                x--;
+                x = x - velocidade;
                 break;
         }
     }
