@@ -25,8 +25,10 @@ public class Jogo {
     }
 
     public Meteoro criarMeteoro(){
+        int MAXIMOX = 640;
+        int MINIMOY = 0;
         Random x = new Random();
-        var meteoro = new Meteoro(x.nextInt(640), 0, 2, Direcao.BAIXO );
+        var meteoro = new Meteoro(x.nextInt(MAXIMOX), MINIMOY, 2, Direcao.BAIXO );
         assets.add(meteoro);
         return meteoro;
 

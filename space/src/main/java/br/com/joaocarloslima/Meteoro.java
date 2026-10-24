@@ -12,7 +12,8 @@ public class Meteoro extends Asset {
     public Meteoro( int x, int y, int velocidade, Direcao direcao) {
         super(x, y, velocidade, direcao);
         Random r = new Random();
-        this.tamanho = r.nextInt(8)+1;
+        int tamanhomaximo = 8;
+        this.tamanho = r.nextInt(tamanhomaximo)+1;
         this.poder = tamanho;
 
         String path = "images/meteoro/meteoro" + tamanho + ".png";
