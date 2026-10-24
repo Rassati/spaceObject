@@ -73,10 +73,19 @@ public abstract class Asset {
         }
     }
 
-    public boolean colidiuCom(Asset asset){
-        return x < asset.getX() + 50 &&
-                x + 50 > asset.getX() &&
-                y < asset.getY() + 50 &&
-                y+ 50 > asset.getY();
+    public int getLargura() {
+        return (int) imagem.getImage().getWidth();
+    }
+
+    public int getAltura() {
+        return (int) imagem.getImage().getHeight();
+    }
+
+
+    public boolean colidiuCom(Asset asset) {
+        return x < asset.getX() + asset.getLargura() &&
+                x + getLargura() > asset.getX() &&
+                y < asset.getY() + asset.getAltura() &&
+                y + getAltura() > asset.getY();
     }
 }
